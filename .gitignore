@@ -43,8 +43,14 @@
 /sdk/*.coe
 /sdk/*.vlog
 /release/*
-!/release/final_ai_report_ppt_bundle_20260815/
-!/release/final_ai_report_ppt_bundle_20260815/**
+/doc/*
+!/doc/architecture.md
+!/doc/isa.md
+!/doc/demo.md
+/rtl/ip/open-la500/doc/
+/rtl/ip/open-la500/README.md
+/tools/templates/
+/tools/board_startup_diagnostic_README.md
 *.backup.jou
 *.backup.log
 *.wdb
