@@ -1,0 +1,147 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Fri Aug 14 16:01:17 2026
+| Host         : memnotop running 64-bit Ubuntu 26.04 LTS
+| Command      : report_incremental_reuse -file /home/liumingjian/mloongson/ciciec2026_lsme_tinyvit/fpga/project_rgb332_baseline_dvi/incremental_reuse.rpt
+| Design       : soc_top
+| Device       : xc7a200t
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reuse Summary
+3. Reference Checkpoint Information
+4. Comparison with Reference Run
+5. Optimization Comparison With Reference Run
+5.1 iphys_opt_replay Optimizations
+5.2 QoR Suggestion Optimizations
+6. Command Comparison with Reference Run
+6.1 Reference:
+6.2 Incremental:
+7. Non Reuse Information
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |               No |
+| Incremental Directive | RuntimeOptimized |
+| Target WNS            |              0.0 |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reuse Summary
+----------------
+
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+|  Type | Matched % (of Initial Total) | Initial Reuse % (of Initial Total) | Current Reuse % (of Total) | Fixed % (of Total) |  Total |
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+| Cells |                        95.33 |                              95.44 |                      95.19 |               0.35 |  75748 |
+| Nets  |                        94.21 |                              93.09 |                      91.51 |               0.00 |  55350 |
+| Pins  |                            - |                              93.04 |                      84.88 |                  - | 353135 |
+| Ports |                       100.00 |                             100.00 |                     100.00 |             100.00 |    202 |
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+
+
+3. Reference Checkpoint Information
+-----------------------------------
+
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | /home/liumingjian/mloongson/技术数据/ciciec2026_lsme_tinyvit-submit/ciciec2026_lsme_tinyvit/build/remote_v2_base64_no_rms/project/Loongson_Soc.runs/impl_1/soc_top_routed.dcp |
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2025.2 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                      0.274 |
+| Recorded WHS                   |                      0.037 |
+| Reference Speed File Version   | PRODUCTION 1.23 2018-06-13 |
+| Incremental Speed File Version | PRODUCTION 1.23 2018-06-13 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+4. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:02 |       00:02 |       00:04 |       00:04 |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |     < 1 min |
+| place_design    |       0.503 |       0.274 |       00:01 |     < 1 min |       00:03 |       00:02 |
+| phys_opt_design |       0.503 |       0.274 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |       0.274 |       0.171 |       00:02 |       00:01 |       00:07 |       00:02 |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+5. Optimization Comparison With Reference Run
+---------------------------------------------
+
+5.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+
+
+5.2 QoR Suggestion Optimizations
+--------------------------------
+
++-----------------+-------+
+| QoR Suggestions | Value |
++-----------------+-------+
+
+
+6. Command Comparison with Reference Run
+----------------------------------------
+
+6.1 Reference:
+--------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  soc_top -part  xc7a200tfbg676-1 
+opt_design -directive Explore
+place_design -directive Explore
+phys_opt_design -directive AggressiveExplore
+route_design -directive Explore
+
+6.2 Incremental:
+----------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  soc_top -part  xc7a200tfbg676-1 
+opt_design -directive Explore
+read_checkpoint -directive RuntimeOptimized  -incremental /home/liumingjian/mloongson/技术数据/ciciec2026_lsme_tinyvit-submit/ciciec2026_lsme_tinyvit/build/remote_v2_base64_no_rms/project/Loongson_Soc.runs/impl_1/soc_top_routed.dcp
+place_design -directive Default
+phys_opt_design
+route_design -directive Default
+
+7. Non Reuse Information
+------------------------
+
++------------------------------------------------------+------+
+|                         Type                         |   %  |
++------------------------------------------------------+------+
+| Non-Reused Cells                                     | 4.80 |
+|   New                                                | 4.46 |
+|   Discarded illegal placement due to netlist changes | 0.02 |
+|   Discarded to improve timing                        | 0.31 |
+| Partially reused nets                                | 0.00 |
+| Non-Reused nets                                      | 8.48 |
+| Non-Reused Ports                                     | 0.00 |
++------------------------------------------------------+------+
+
+

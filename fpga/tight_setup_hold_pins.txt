@@ -1,0 +1,15 @@
++====================+===================+===========================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                       |
++====================+===================+===========================================================+
+| sys_clk            | sys_clk           | u_axi_ram/u_axi_sram_sp/write_data_q_reg[3]/D             |
+| sys_clk            | sys_clk           | u_axi_ram/u_axi_sram_sp/write_data_q_reg[4]/D             |
+| sys_clk            | sys_clk           | u_axi_ram/u_axi_sram_sp/write_data_q_reg[2]/D             |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_fused_attention/softmax_row_in_reg[104]/D |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_softmax/row_out_reg[446]/D                |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_softmax/row_out_reg[222]/D                |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_softmax/row_out_reg[158]/D                |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_fused_attention/softmax_row_in_reg[617]/D |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_fused_attention/softmax_row_in_reg[584]/D |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_fused_attention/softmax_row_in_reg[873]/D |
+| sys_clk            | sys_clk           | u_lsme/u_exec/u_fused_attention/softmax_row_in_reg[968]/D |
++--------------------+-------------------+-----------------------------------------------------------+
