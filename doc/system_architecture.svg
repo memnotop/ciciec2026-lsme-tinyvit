@@ -59,10 +59,10 @@
   <text class="sub" x="237.5" y="391">输入图像 · Attention 热图 · 分类结果</text>
 
   <path class="line" d="M 215 195 L 260 195"/>
-  <text class="label" x="237.5" y="181">自定义指令</text>
+  <text class="label" x="237.5" y="132">自定义指令</text>
 
   <path class="line" d="M 445 195 L 520 195"/>
-  <text class="label" x="482.5" y="181">命令 / 响应</text>
+  <text class="label" x="425" y="132">命令 / 响应</text>
 
   <path class="line" d="M 695 178 L 745 151"/>
   <path class="line" d="M 910 142.5 L 955 142.5"/>
