@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="470" viewBox="0 0 1500 470" role="img" aria-labelledby="title desc">
+  <title id="title">LSME-128I 系统结构</title>
+  <desc id="desc">LoongArch32R 处理器通过 LACC 接口连接 LSME 加速器，矩阵计算和专用算子经 AXI 主机访问存储器，处理器同时驱动 DVI 可视化界面。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+    <style>
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2.5; }
+      .group { fill: #ffffff; stroke: #111111; stroke-width: 2.5; stroke-dasharray: 9 7; }
+      .line { fill: none; stroke: #111111; stroke-width: 2.5; marker-end: url(#arrow); }
+      .dash-line { fill: none; stroke: #111111; stroke-width: 2.5; stroke-dasharray: 8 6; marker-end: url(#arrow); }
+      .title { font: 700 24px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #111111; }
+      .main { font: 700 22px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #111111; text-anchor: middle; }
+      .sub { font: 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #333333; text-anchor: middle; }
+      .label { font: 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #111111; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="1500" height="470" fill="#ffffff"/>
+
+  <rect class="box" x="30" y="150" width="185" height="90" rx="4"/>
+  <text class="main" x="122.5" y="187">龙芯处理器</text>
+  <text class="sub" x="122.5" y="216">LoongArch32R</text>
+
+  <rect class="box" x="260" y="150" width="185" height="90" rx="4"/>
+  <text class="main" x="352.5" y="187">LACC 接口</text>
+  <text class="sub" x="352.5" y="216">指令接入 · 跨时钟域</text>
+
+  <rect class="group" x="485" y="35" width="665" height="385" rx="4"/>
+  <text class="title" x="510" y="72">LSME-128I 自主加速 IP</text>
+
+  <rect class="box" x="520" y="150" width="175" height="90" rx="4"/>
+  <text class="main" x="607.5" y="187">任务控制</text>
+  <text class="sub" x="607.5" y="216">描述符执行 · 状态管理</text>
+
+  <rect class="box" x="745" y="100" width="165" height="85" rx="4"/>
+  <text class="main" x="827.5" y="135">矩阵状态</text>
+  <text class="sub" x="827.5" y="163">Z 向量 · P 谓词 · ZA</text>
+
+  <rect class="box" x="955" y="100" width="160" height="85" rx="4"/>
+  <text class="main" x="1035" y="135">矩阵外积阵列</text>
+  <text class="sub" x="1035" y="163">64 路 INT8 MOPA</text>
+
+  <rect class="box" x="745" y="260" width="370" height="85" rx="4"/>
+  <text class="main" x="930" y="295">辅助整数算子</text>
+  <text class="sub" x="930" y="323">Softmax · VADD · RMSNorm</text>
+
+  <rect class="box" x="1185" y="150" width="130" height="90" rx="4"/>
+  <text class="main" x="1250" y="187">AXI 主机</text>
+  <text class="sub" x="1250" y="216">突发访存</text>
+
+  <rect class="box" x="1350" y="150" width="130" height="90" rx="4"/>
+  <text class="main" x="1415" y="187">共享存储</text>
+  <text class="sub" x="1415" y="216">片上 / 外部</text>
+
+  <rect class="box" x="30" y="325" width="415" height="90" rx="4"/>
+  <text class="main" x="237.5" y="362">DVI 可视化界面</text>
+  <text class="sub" x="237.5" y="391">输入图像 · Attention 热图 · 分类结果</text>
+
+  <path class="line" d="M 215 195 L 260 195"/>
+  <text class="label" x="237.5" y="181">自定义指令</text>
+
+  <path class="line" d="M 445 195 L 520 195"/>
+  <text class="label" x="482.5" y="181">命令 / 响应</text>
+
+  <path class="line" d="M 695 178 L 745 151"/>
+  <path class="line" d="M 910 142.5 L 955 142.5"/>
+  <path class="line" d="M 695 218 L 745 280"/>
+
+  <path class="line" d="M 1115 142.5 L 1150 142.5 L 1150 178 L 1185 178"/>
+  <path class="line" d="M 1115 302.5 L 1150 302.5 L 1150 212 L 1185 212"/>
+  <path class="line" d="M 1315 195 L 1350 195"/>
+
+  <path class="dash-line" d="M 122.5 240 L 122.5 325"/>
+  <text class="label" x="196" y="289">结果发布</text>
+</svg>

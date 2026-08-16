@@ -13,18 +13,7 @@ DVI 同步展示输入图像、注意力热图和分类结果。
 
 ## 系统结构
 
-```mermaid
-flowchart LR
-    CPU[LoongArch32R CPU] -->|LACC custom instruction| CDC[Clock-domain bridge]
-    CDC --> EXEC[Descriptor engine]
-    EXEC --> STATE[Z / P / ZA state]
-    STATE --> MOPA[64-lane INT8 MOPA]
-    EXEC --> OPS[Softmax / VADD]
-    MOPA --> AXI[AXI master]
-    OPS --> AXI
-    AXI --> MEM[BaseRAM / ExtRAM]
-    CPU --> DVI[DVI dashboard]
-```
+![LSME-128I 系统结构](doc/system_architecture.svg)
 
 ## 代码入口
 

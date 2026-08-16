@@ -47,6 +47,7 @@
 !/doc/architecture.md
 !/doc/isa.md
 !/doc/demo.md
+!/doc/system_architecture.svg
 /rtl/ip/open-la500/doc/
 /rtl/ip/open-la500/README.md
 /tools/templates/

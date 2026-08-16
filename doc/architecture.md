@@ -4,11 +4,7 @@ LSME-128I 在 LoongArch32R CPU 与外部存储器之间增加一个面向 INT8 �
 协处理器。设计借鉴 SME 的向量、谓词和二维累加状态，但只实现 FPGA 上可验证的
 固定整数子集。
 
-```text
-LACC instruction -> CDC -> descriptor engine -> Z/P/ZA + MOPA -> AXI memory
-                                      |-> Softmax / VADD
-CPU -----------------------------------------------------------> DVI dashboard
-```
+![LSME-128I 系统结构](system_architecture.svg)
 
 核心结构：
 
