@@ -13,7 +13,7 @@ DVI 同步展示输入图像、注意力热图和分类结果。
 
 ## 系统结构
 
-![LSME-128I 系统结构](doc/system_architecture.svg)
+![LSME-128I 系统结构](doc/system_architecture.png)
 
 ## 代码入口
 
